@@ -1,26 +1,53 @@
 ---
+// "use-client";
 import FotoPerfil from "@/assets/Foto-perfil.png";
+import { TextGenerateEffect, TypewriterEffectSmooth } from "@/components";
+import { MESSAGES } from "@/constants/messages.constants";
+import { LayoutTextFlip } from "./TextFlip";
+import { motion } from "motion/react";
+import { TextHoverEffect } from "./TextHoverEffect";
 ---
 
-<!-- <header class="w-screen h-2/6">
-  <button class="bg-transparent-80">About us</button>
-  <button class="bg-transparent-50">Proyectos</button>
-  <button class="bg-transparent-50">Contacto</button>
-</header> -->
-<section>
-  <picture id="initial-name" class="">
-    <img
-      alt="perfil_img"
-      class="text-center justify-center"
-      src={FotoPerfil.src}
+<div>
+  <section>
+    <TypewriterEffectSmooth
+      words={[
+        { text: "BENJAMIN" },
+        { text: "DEV", className: "text-blue-500 dark:text-blue-500" },
+      ]}
+      client:load
     />
-  </picture>
-</section>
-<section id="about-me">
-  <h1 class="text-xl shadow-2xl decoration-pink">Benjamin Dev</h1>
-</section>
+  </section>
+  <section class="grid grid-cols-2 columns-10 row-span-1">
+    <picture id="initial-name">
+      <img
+        alt="perfil_img"
+        class="text-center justify-center"
+        src={FotoPerfil.src}
+      />
+    </picture>
+  </section>
+  <section class="justify-center m-300" id="about-me">
+    <TextGenerateEffect
+      words={MESSAGES.ABOUT_ME}
+      className="inline"
+      client:load
+    />
+  </section>
+  <section>
+    <motion.div
+      class="relative mx-4 my-4 flex flex-col items-center justify-center gap-4 text-center sm:mx-0 sm:mb-0 sm:flex-row"
+    >
+      <LayoutTextFlip client:load />
+    </motion.div>
+  </section>
+  <section>
+    <div class="h-[40rem] flex items-center justify-center">
+      <TextHoverEffect text="PROYECTOS" client:load />
+    </div>
+  </section>
 
-<script>
+  <!-- <script>
   import { gsap } from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -35,5 +62,6 @@ import FotoPerfil from "@/assets/Foto-perfil.png";
   });
 
   timeLine.to("#initial-name", { opacity: 0, duration: 0.02 });
-  timeLine.to("#about-me", { opacity: 1, duration: 0.02 });
-</script>
+  timeLine.to("#about-me", { opacity: 1, duration: 0.002 });
+</script> -->
+</div>
