@@ -1,0 +1,39 @@
+---
+import FotoPerfil from "@/assets/Foto-perfil.png";
+---
+
+<!-- <header class="w-screen h-2/6">
+  <button class="bg-transparent-80">About us</button>
+  <button class="bg-transparent-50">Proyectos</button>
+  <button class="bg-transparent-50">Contacto</button>
+</header> -->
+<section>
+  <picture id="initial-name" class="">
+    <img
+      alt="perfil_img"
+      class="text-center justify-center"
+      src={FotoPerfil.src}
+    />
+  </picture>
+</section>
+<section id="about-me">
+  <h1 class="text-xl shadow-2xl decoration-pink">Benjamin Dev</h1>
+</section>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  console.log("GSAP version: ", gsap.version);
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  const timeLine = gsap.timeline({
+    scrollTrigger: {
+      scrub: 1, // demora en que dura el scroll en sincronizarse con la linea de tiempo
+    },
+  });
+
+  timeLine.to("#initial-name", { opacity: 0, duration: 0.02 });
+  timeLine.to("#about-me", { opacity: 1, duration: 0.02 });
+</script>
