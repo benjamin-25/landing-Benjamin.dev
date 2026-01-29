@@ -1,13 +1,8 @@
-// "use-client";
 import { cn } from "@/utils/utils";
-import { motion, stagger, useAnimate, useInView } from "motion/react";
-import React, { useEffect } from "react";
+import { motion } from "motion/react";
+import React from "react";
 
-export const TypewriterEffectSmooth = ({
-  words,
-  className,
-  cursorClassName,
-}) => {
+const TypewriterEffectSmooth = ({ words, className, cursorClassName }) => {
   // split text inside of words into array of characters
   const wordsArray = words?.map((word) => {
     return {
@@ -76,9 +71,11 @@ export const TypewriterEffectSmooth = ({
         }}
         className={cn(
           "block rounded-sm w-[4px]  h-4 sm:h-6 xl:h-12 bg-blue-500",
-          cursorClassName
+          cursorClassName,
         )}
       ></motion.span>
     </div>
   );
 };
+
+export default TypewriterEffectSmooth;

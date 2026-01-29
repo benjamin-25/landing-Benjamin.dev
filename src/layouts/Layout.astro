@@ -13,22 +13,45 @@
 </html>
 
 <style is:global>
-  @import "tailwindcss";
   html,
   body {
-    height: 200vh;
+    height: 300vh;
     margin: 0;
     width: 100%;
     overscroll-behavior: none;
     background-size: 40px 40px;
-    background: radial-gradient(at 0% 0%, rgb(0, 0, 0) 0, transparent 50%),
+    background:
+      radial-gradient(at 0% 0%, rgb(0, 0, 0) 0, transparent 50%),
       radial-gradient(at 50% 0%, hsla(225, 39%, 30%, 1) 0, transparent 50%),
       radial-gradient(at 100% 0%, rgb(64, 13, 86) 0, transparent 50%);
     background-color: #020617;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     color: white;
   }
-  section {
-    padding: 0 3rem;
+
+  .title {
+    display: flex;
+    top: 0;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    text-align: center;
+    font-size: 15rem;
+  }
+
+  .stack {
+    display: flex;
+    flex-direction: row;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    /* font-size: 8rem; */
+  }
+
+  .aboutMe {
+    font-size: 5rem;
+  }
+  .layouts {
+    margin: 30px 30px;
   }
 </style>

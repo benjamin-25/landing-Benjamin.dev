@@ -1,11 +1,16 @@
-"use client";
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { cn } from "@/utils/utils";
 
 export const LayoutTextFlip = ({
-  text = "Build Amazing",
-  words = ["Landing Pages", "Component Blocks", "Page Sections", "3D Shaders"],
+  text = "Stack Tecnológico ",
+  words = [
+    { text: "React", logo: "src/assets/React.png" },
+    { text: "NodeJS", logo: "src/assets/NodeJs.png" },
+    { text: "JavaScript", logo: "src/assets/JavaScript.png" },
+    { text: "TypeScript", logo: "src/assets/TypeScript.png" },
+    { text: "Java", logo: "src/assets/Java.png" },
+  ],
   duration = 3000,
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -22,7 +27,7 @@ export const LayoutTextFlip = ({
     <>
       <motion.span
         layoutId="subtext"
-        className="text-2xl font-bold tracking-tight drop-shadow-lg md:text-4xl"
+        className="text-1xl font-bold tracking-tight drop-shadow-lg md:text-4xl"
       >
         {text}
       </motion.span>
@@ -45,7 +50,13 @@ export const LayoutTextFlip = ({
             }}
             className={cn("inline-block whitespace-nowrap")}
           >
-            {words[currentIndex]}
+            <motion.img
+              src={words[currentIndex]?.logo}
+              className="flex flex-col items-center justify-center"
+              height={100}
+              width={100}
+            />
+            {words[currentIndex]?.text}
           </motion.span>
         </AnimatePresence>
       </motion.span>
