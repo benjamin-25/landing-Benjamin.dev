@@ -13,14 +13,18 @@ import { TextHoverEffect } from "./TextHoverEffect";
       { text: "BENJAMIN" },
       { text: "<DEV />", className: "text-blue-500 dark:text-blue-500" },
     ]}
+    className=""
+    cursorClassName=""
     client:load
   />
 </section>
-<section class="layouts">
+<section class="layouts flex self-center items-center justify-center">
   <picture id="initial-name">
     <img
       alt="perfil_img"
       class="text-center justify-center"
+      height={200}
+      width={200}
       src={FotoPerfil.src}
     />
   </picture>
@@ -36,10 +40,12 @@ import { TextHoverEffect } from "./TextHoverEffect";
   <LayoutTextFlip client:load />
 </section>
 <section class="layouts" id="projects">
+  <!-- <TypewriterEffectSmooth words={[{ text: "PROYECTOS" }]} client:visible /> -->
+
   <TextHoverEffect text="PROYECTOS" duration={0.11} client:load />
 </section>
 
-<!-- <script>
+<script>
   import { gsap } from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -53,6 +59,6 @@ import { TextHoverEffect } from "./TextHoverEffect";
     },
   });
 
-  timeLine.to("#initial-name", { opacity: 0, duration: 0.02 });
-  timeLine.to("#about-me", { opacity: 1, duration: 0.002 });
-</script> -->
+  // timeLine.to("#projects", { duration: 1, scale: 2 });
+  // timeLine.to("#about-me", { opacity: 1, duration: 0.002 });
+</script>
