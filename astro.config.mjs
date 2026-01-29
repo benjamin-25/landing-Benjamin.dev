@@ -9,7 +9,7 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   integrations: [react()],
   site: "https://benjamin-25.github.io",
-  base: "project",
+  base: "",
   vite: {
     plugins: [tailwindcss()],
   },
