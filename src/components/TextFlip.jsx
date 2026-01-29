@@ -5,11 +5,11 @@ import { cn } from "@/utils/utils";
 export const LayoutTextFlip = ({
   text = "Stack Tecnológico ",
   words = [
-    { text: "React", logo: "src/assets/React.png" },
-    { text: "NodeJS", logo: "src/assets/NodeJs.png" },
-    { text: "JavaScript", logo: "src/assets/JavaScript.png" },
-    { text: "TypeScript", logo: "src/assets/TypeScript.png" },
-    { text: "Java", logo: "src/assets/Java.png" },
+    { text: "React", logo: "/React.png" },
+    { text: "NodeJS", logo: "/NodeJs.png" },
+    { text: "JavaScript", logo: "/JavaScript.png" },
+    { text: "TypeScript", logo: "/TypeScript.png" },
+    { text: "Java", logo: "/Java.png" },
   ],
   duration = 3000,
 }) => {
