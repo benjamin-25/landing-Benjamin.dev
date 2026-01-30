@@ -1,15 +1,20 @@
 import React, { useState, useEffect } from "react";
+import ReactImage from "../assets/React.png";
+import NodeImage from "../assets/NodeJs.png";
+import JavaScriptImage from "../assets/JavaScript.png";
+import TypeScriptImage from "../assets/TypeScript.png";
+import JavaImage from "../assets/Java.png";
 import { motion, AnimatePresence } from "motion/react";
 import { cn } from "@/utils/utils";
 
 export const LayoutTextFlip = ({
   text = "Stack Tecnológico ",
   words = [
-    { text: "React", logo: "/React.png" },
-    { text: "NodeJS", logo: "/NodeJs.png" },
-    { text: "JavaScript", logo: "/JavaScript.png" },
-    { text: "TypeScript", logo: "/TypeScript.png" },
-    { text: "Java", logo: "/Java.png" },
+    { text: "React", logo: ReactImage.src },
+    { text: "NodeJS", logo: NodeImage.src },
+    { text: "JavaScript", logo: JavaScriptImage.src },
+    { text: "TypeScript", logo: TypeScriptImage.src },
+    { text: "Java", logo: JavaImage.src },
   ],
   duration = 3000,
 }) => {
